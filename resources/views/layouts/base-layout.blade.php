@@ -82,7 +82,7 @@
             </div>
 
             <div class="container flex gap-8 sm:gap-0 flex-wrap items-center justify-between">
-                <div class="flex space-x-4 text-sm sm:w-1/2">
+                <div class="flex space-x-4 text-sm">
                     <a href="#" class="hover:underline">Blog</a>
                     <a href="#" class="hover:underline">Blog</a>
                     <a href="#" class="hover:underline">Blog</a>
@@ -90,7 +90,7 @@
                     <a href="#" class="hover:underline">Blog</a>
                 </div>
 
-                <div class="text-xs sm:w-1/2">
+                <div class="text-xs">
                     <span>made with ❤️ by Mouad Benali, © 2021 - 2022 EIC</span>
                 </div>
             </div>
