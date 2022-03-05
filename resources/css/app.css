@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+	@variants responsive {
+		.ratio-720 {
+			padding-bottom: 56.25%;
+		}
+	}
+}
+
+h2 {
+    @apply text-5xl font-bold leading-relaxed;
+}
+
+h3 {
+    @apply text-2xl font-bold leading-snug;
+}
+
+p {
+    @apply leading-relaxed opacity-80;
+}
