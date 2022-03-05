@@ -9,8 +9,9 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = WinkPost::orderBy('created_at', 'desc')->with('author')->get();
-        return view('index', compact(['posts']));
+        $posts = WinkPost::orderBy('created_at', 'desc')->with('author', 'tags')->get();
+        $latestPost = $posts->first();
+        return view('index', compact(['posts', 'latestPost']));
     }
 
     public function show(WinkPost $post)

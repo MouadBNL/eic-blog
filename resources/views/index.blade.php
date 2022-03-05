@@ -5,38 +5,32 @@
                 <div class="flex items-center">
                     <article>
                         <div class="flex space-x-2 mb-4">
-                            <span class="block px-4 py-1 rounded-full transition bg-primary text-white bg-opacity-100 hover:bg-opacity-90">news</span>
-                            <span class="block px-4 py-1 rounded-full transition bg-primary text-white bg-opacity-100 hover:bg-opacity-90">contest</span>
-                            <span class="block px-4 py-1 rounded-full transition bg-primary text-white bg-opacity-100 hover:bg-opacity-90">competitive programming</span>
-                            <span class="block px-4 py-1 rounded-full transition bg-primary text-white bg-opacity-100 hover:bg-opacity-90">ensak</span>
+                            @foreach ($latestPost->tags as $tag)
+                                <x-tag>{{ $tag->name }}</x-tag>
+                            @endforeach
+                            <span class="block py-1 opacity-70">{{ $latestPost->created_at->diffForHumans() }}</span>
                         </div>
-                        <h2>Managing Secrets in Laravel with AWS Parameter Store</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae non et in tristique aliquam. A eget euismod arcu et. Id ultricies ac sem sagittis. Amet sagittis, faucibus in ut mauris, ligula. Interdum non.
-                        </p>
+                        <h2 class="hover:underline">{{ $latestPost->title }}</h2>
+                        @if($latestPost->excerpt)
+                            <p>
+                                {{ $latestPost->excerpt }}
+                            </p>
+                        @endif
                     </article>
                 </div>
 
                 <div class="pl-24">
-                    <div class="ratio-720 bg-gray-300">
-
+                    <div class="ratio-720 bg-gray-300 relative overflow-hidden">
+                        <img class="absolute inset-0 object-fill object-center" src="{{ $latestPost->featured_image ?? 'https://dummyimage.com/16:9x720&text=No+Image' }}" alt="image">
                     </div>
                 </div>
             </div>
 
 
             <div class="grid grid-cols-4 gap-8">
-                @for ($i = 0; $i < 4; $i++)
-                    <article>
-                        <div class="ratio-720 bg-gray-300 mb-3"></div>
-                        <div class="flex space-x-2 mb-3 text-sm">
-                            <span class="block px-4 py-1 rounded-full transition bg-primary text-white bg-opacity-100 hover:bg-opacity-90">news</span>
-                            <span class="block px-4 py-1 rounded-full transition bg-primary text-white bg-opacity-100 hover:bg-opacity-90">contest</span>
-                            <span class="block px-4 py-1 opacity-70">December 1st, 2021</span>
-                        </div>
-                        <h3>Most popular IT certifications for 2022</h3>
-                    </article>
-                @endfor
+                @foreach ($posts->take(4) as $post)
+                    <x-post-card :post="$post" />
+                @endforeach
             </div>
         </div>
     </section>
@@ -46,17 +40,9 @@
         <div class="container">
             <h2 class="text-primary mb-16">Latest articles</h2>
             <div class="grid grid-cols-4 gap-x-8 gap-y-16">
-                @for ($i = 0; $i < 16; $i++)
-                    <article>
-                        <div class="ratio-720 bg-gray-300 mb-3"></div>
-                        <div class="flex flex-wrap gap-2 mb-3 text-sm">
-                            <span class="block px-4 py-1 rounded-full transition bg-primary text-white bg-opacity-100 hover:bg-opacity-90">news</span>
-                            <span class="block px-4 py-1 rounded-full transition bg-primary text-white bg-opacity-100 hover:bg-opacity-90">contest</span>
-                            <span class="block py-1 opacity-70">December 1st, 2021</span>
-                        </div>
-                        <h3>Most popular IT certifications for 2022</h3>
-                    </article>
-                @endfor
+                @foreach ($posts->take(16) as $post)
+                    <x-post-card :post="$post" />
+                @endforeach
             </div>
         </div>
     </section>

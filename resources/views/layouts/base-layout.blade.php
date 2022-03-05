@@ -23,7 +23,9 @@
 
         <header class="bg-dark text-light">
             <div class="container flex items-center justify-between py-4">
-                <h1 class="text-2xl font-extrabold">EIC Blog</h1>
+                <a href="{{ route('home') }}">
+                    <h1 class="text-2xl font-extrabold">EIC Blog</h1>
+                </a>
 
                 <nav>
                     <ul class="flex space-x-2">
