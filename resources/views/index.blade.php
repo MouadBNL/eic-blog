@@ -10,7 +10,9 @@
                             @endforeach
                             <span class="block py-1 opacity-70">{{ $latestPost->created_at->diffForHumans() }}</span>
                         </div>
-                        <h2 class="hover:underline">{{ $latestPost->title }}</h2>
+                        <a href="{{ route('posts.show', $latestPost->slug) }}">
+                            <h2 class="hover:underline">{{ $latestPost->title }}</h2>
+                        </a>
                         @if($latestPost->excerpt)
                             <p>
                                 {{ $latestPost->excerpt }}
