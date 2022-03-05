@@ -28,7 +28,7 @@
 
 
             <div class="hidden md:grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                @foreach ($posts->take(4) as $post)
+                @foreach ($posts->slice(1, 4) as $post)
                     <x-post-card :post="$post" />
                 @endforeach
             </div>
