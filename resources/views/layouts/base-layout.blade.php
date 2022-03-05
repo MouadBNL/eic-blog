@@ -48,7 +48,7 @@
             <div class="container flex items-center justify-between mb-16">
                 <div class="">
                     <h4 class="text-2xl font-medium mb-4">Follow EIC on</h4>
-                    <div class="grid grid-cols-4 gap-4 text-sm">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
                         <a href="#" class="bg-white bg-opacity-10 p-2 flex space-x-4 items-center transition hover:bg-opacity-25">
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M17.7188 9C17.7188 4.18359 13.8164 0.28125 9 0.28125C4.18359 0.28125 0.28125 4.18359 0.28125 9C0.28125 13.3516 3.46957 16.9587 7.6377 17.6133V11.5204H5.42285V9H7.6377V7.07906C7.6377 4.8941 8.93848 3.68719 10.9308 3.68719C11.8849 3.68719 12.8827 3.85734 12.8827 3.85734V6.00187H11.783C10.7002 6.00187 10.3623 6.67406 10.3623 7.36348V9H12.7804L12.3936 11.5204H10.3623V17.6133C14.5304 16.9587 17.7188 13.3516 17.7188 9Z" fill="#FAFAFA"/>
@@ -81,8 +81,8 @@
                 </div>
             </div>
 
-            <div class="container flex items-center justify-between">
-                <div class="flex space-x-4 text-sm">
+            <div class="container flex gap-8 sm:gap-0 flex-wrap items-center justify-between">
+                <div class="flex space-x-4 text-sm sm:w-1/2">
                     <a href="#" class="hover:underline">Blog</a>
                     <a href="#" class="hover:underline">Blog</a>
                     <a href="#" class="hover:underline">Blog</a>
@@ -90,7 +90,7 @@
                     <a href="#" class="hover:underline">Blog</a>
                 </div>
 
-                <div class="text-xs">
+                <div class="text-xs sm:w-1/2">
                     <span>made with ❤️ by Mouad Benali, © 2021 - 2022 EIC</span>
                 </div>
             </div>
