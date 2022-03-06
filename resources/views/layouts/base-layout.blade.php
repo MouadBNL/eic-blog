@@ -19,7 +19,7 @@
             }
         </style>
     </head>
-    <body class="antialiased">
+    <body class="antialiased flex flex-col min-h-screen">
 
         <header class="bg-dark text-light">
             <div class="container flex items-center justify-between py-4">
@@ -29,10 +29,10 @@
 
                 <nav>
                     <ul class="flex space-x-2">
-                        <li><a href="#" class="px-6 py-2 transition bg-white bg-opacity-0 hover:bg-opacity-10">Blog</a></li>
-                        <li><a href="#" class="px-6 py-2 transition bg-white bg-opacity-0 hover:bg-opacity-10">EIC Talks</a></li>
-                        <li><a href="#" class="px-6 py-2 transition bg-white bg-opacity-0 hover:bg-opacity-10">Projects</a></li>
-                        <li><a href="#" class="px-6 py-2 transition bg-white bg-opacity-0 hover:bg-opacity-10">About the club</a></li>
+                        <li><a href="/tag/blog" class="px-6 py-2 transition bg-white bg-opacity-0 hover:bg-opacity-10">Blog</a></li>
+                        <li><a href="/tag/eic-talk" class="px-6 py-2 transition bg-white bg-opacity-0 hover:bg-opacity-10">EIC Talks</a></li>
+                        <li><a href="/tag/project" class="px-6 py-2 transition bg-white bg-opacity-0 hover:bg-opacity-10">Projects</a></li>
+                        {{-- <li><a href="#" class="px-6 py-2 transition bg-white bg-opacity-0 hover:bg-opacity-10">About the club</a></li> --}}
                     </ul>
                 </nav>
             </div>
@@ -44,7 +44,7 @@
             {{ $slot }}
         </main>
 
-        <footer class="bg-dark py-16 text-light">
+        <footer class="bg-dark py-16 text-light mt-auto">
             <div class="container flex items-center justify-between mb-16">
                 <div class="">
                     <h4 class="text-2xl font-medium mb-4">Follow EIC on</h4>

@@ -41,11 +41,15 @@
     <section class="py-24">
         <div class="container">
             <h2 class="text-primary mb-16">Latest articles</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
-                @foreach ($posts->take(16) as $post)
-                    <x-post-card :post="$post" />
-                @endforeach
-            </div>
+            @if($posts->count() > 0)
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+                    @foreach ($posts->take(16) as $post)
+                        <x-post-card :post="$post" />
+                    @endforeach
+                </div>
+            @else
+                <p>il n'y a pas d'articles disponibles pour le moment, revenez plus tard.</p>
+            @endif
         </div>
     </section>
 </x-layouts.base-layout>
