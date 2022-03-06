@@ -6,14 +6,15 @@ use Illuminate\View\Component;
 
 class Tag extends Component
 {
+    public $tag;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($tag)
     {
-        //
+        $this->tag = $tag;
     }
 
     /**

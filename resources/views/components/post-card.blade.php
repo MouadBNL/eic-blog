@@ -4,7 +4,7 @@
     </div>
     <div class="flex flex-wrap gap-2 mb-3 text-sm">
         @foreach ($post->tags as $tag)
-            <x-tag>{{ $tag->name }}</x-tag>
+            <x-tag :tag="$tag" />
         @endforeach
         <span class="block py-1 opacity-70">{{ $post->created_at->diffForHumans() }}</span>
     </div>

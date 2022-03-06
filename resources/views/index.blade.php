@@ -6,7 +6,7 @@
                     <article>
                         <div class="flex space-x-2 mb-4">
                             @foreach ($latestPost->tags as $tag)
-                                <x-tag>{{ $tag->name }}</x-tag>
+                                <x-tag :tag="$tag"/>
                             @endforeach
                             <span class="block py-1 opacity-70">{{ $latestPost->created_at->diffForHumans() }}</span>
                         </div>

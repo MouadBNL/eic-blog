@@ -1,1 +1,1 @@
-<span class="block px-4 py-1 rounded-full transition bg-primary text-white bg-opacity-100 hover:bg-opacity-90">{{ $slot }}</span>
+<a href="{{ route('tags.show', $tag->slug) }}" class="block px-4 py-1 rounded-full transition bg-primary text-white bg-opacity-100 hover:bg-opacity-90">{{ $tag->name }}</a>

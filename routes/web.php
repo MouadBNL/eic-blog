@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
+use Wink\WinkPost;
+use Wink\WinkTag;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +20,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PostController::class, 'index'])->name('home');
 Route::get('/post/{post:slug}', [PostController::class, 'show'])->name('posts.show');
+Route::get('/tag/{tag:slug}', [TagController::class, 'show'])->name('tags.show');
