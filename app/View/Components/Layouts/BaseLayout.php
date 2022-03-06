@@ -6,14 +6,15 @@ use Illuminate\View\Component;
 
 class BaseLayout extends Component
 {
+    public $title;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(String $title = "EIC blog")
     {
-        //
+        $this->title = $title;
     }
 
     /**

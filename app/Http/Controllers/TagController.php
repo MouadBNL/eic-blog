@@ -10,7 +10,11 @@ class TagController extends Controller
 {
     public function show(WinkTag $tag)
     {
+        $pageData = [
+            'title' => 'EIC - #'. $tag->name,
+            'meta' => null
+        ];
         $posts = WinkPost::live()->tag($tag->slug)->with('tags')->paginate(32);
-        return view('tags.show', compact('posts', 'tag'));
+        return view('tags.show', compact('posts', 'tag', 'pageData'));
     }
 }

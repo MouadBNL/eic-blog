@@ -1,4 +1,4 @@
-<x-layouts.base-layout>
+<x-layouts.base-layout :title="$pageData['title']">
     <section class="py-12 md:py-24 bg-dark text-white">
         <div class="container">
             <div class="pt-8 grid grid-cols-2 gap-x-8 mb-24">

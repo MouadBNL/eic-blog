@@ -1,4 +1,4 @@
-<x-layouts.base-layout>
+<x-layouts.base-layout :title="$pageData['title']">
     <section class="relative">
         <div class="bg-dark py-36">
             <div class="container text-light flex-wrap-reverse lg:flex-nowrap flex gap-8">

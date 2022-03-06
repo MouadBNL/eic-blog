@@ -11,11 +11,21 @@ class PostController extends Controller
     {
         $posts = WinkPost::live()->orderBy('created_at', 'desc')->with('tags')->get();
         $latestPost = $posts->first();
-        return view('index', compact(['posts', 'latestPost']));
+
+        $pageData = [
+            'title' => 'EIC - Accueil',
+            'meta' => null
+        ];
+
+        return view('index', compact(['posts', 'latestPost', 'pageData']));
     }
 
     public function show(WinkPost $post)
     {
-        return view('posts.show', compact('post'));
+        $pageData = [
+            'title' => 'EIC - '.$post->title,
+            'meta' => $post->meta
+        ];
+        return view('posts.show', compact(['post', 'pageData']));
     }
 }

@@ -1,4 +1,4 @@
-<x-layouts.base-layout>
+<x-layouts.base-layout :title="$pageData['title']">
     <section class="py-16 bg-dark">
         <div class="container text-white">
             <h2 class="text-center">#{{ $tag->name }}</h2>
